@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #e63946;
+}
+
+#clock{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 25vh;
+    background: #a8dadc;
+}
+#days,#hours,#minutes,#seconds,#ampm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+}
+
+#hour,#minute,#second,#am-pm{
+    color:white;
+    font-size:100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#day,#am-pm{
+    color:white;
+    font-size:100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.semicolon{
+    font-size: 100px;
+    color:white
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keshav Bokhoree - Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="clock">
+        <div id="days">
+            <p id="day"></p>
+        </div>
+        <div id="hours">
+            <p id="hour"></p>
+        </div>
+        <p class="semicolon">:</p>
+        <div id="minutes">
+            <p id="minute"></p>
+        </div>
+        <p class="semicolon">:</p>
+        <div id="seconds">
+            <p id="second"></p>
+        </div>
+        <div id="ampm">
+            <p id="am-pm"></p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        
+
+        function showTime(){
+        let hour = document.getElementById("hour")
+        let minute = document.getElementById("minute")
+        let second = document.getElementById("second")
+        let day = document.getElementById("day")
+        let am_pm = document.getElementById("am-pm")
+
+        let weekDays=["Mon", "Tues" , "Wed" ,"Thur", "Fri" , "Sat" , "Sun" ]
+        let ampm = ""
+
+        const date = new Date()
+            if (date.getHours() > 12){
+                ampm = "PM"
+            }else{
+                ampm = "AM"
+            }
+            
+            hour.innerHTML = date.getHours()
+            minute.innerHTML = date.getMinutes()
+            second.innerHTML = date.getSeconds()
+            day.innerHTML = weekDays[date.getDay()-1]
+            am_pm.innerHTML = ampm
+        }
+
+        setInterval(showTime,1000);
+        
+
+    </script>
+
+
+</body>
+</html>
